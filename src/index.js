@@ -2,12 +2,13 @@ const express = require("express");
 const cors = require("cors");
 const { Pool, Client } = require("pg");
 const bodyParser = require("body-parser");
+require('dotenv').config()
 
 const credentials = {
   user: "postgres",
   host: "localhost",
   database: "todo",
-  password: "postgres",
+  password: process.env.DATABASE_PASSWORD,
   port: 5432,
 };
 
